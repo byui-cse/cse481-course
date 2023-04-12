@@ -1,0 +1,318 @@
+
+\documentclass[12pt]{amsart}
+\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+\geometry{a4paper} % or letter or a5paper or ... etc
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsaddr}
+\usepackage{hyperref}
+\usepackage{dirtytalk}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+
+
+\title{CSE 481 Tasks}
+
+\date{\today}
+
+
+%%% BEGIN DOCUMENT
+\begin{document}
+
+You will have individual tasks and Mob Tasks throughout the semester. For the Mob Tasks, you are required to follow Mob Programming principles.
+\subsection*{Mob Programming}
+\begin{itemize}
+	\item \url{https://youtu.be/ikilHGYk5Fs}
+	\item \url{https://www.pluralsight.com/blog/software-development/mob-programming-101}
+	\item \url{https://www.techtarget.com/searchsoftwarequality/definition/mob-programming}
+\end{itemize}
+\subsection*{Course Tracker}
+
+You are required to track your progress through the course using this table. 
+
+Note: Each row represents a module, a half-week's work.
+
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+   \multicolumn{6}{c}{\textbf{\large Course Tracker}}\\
+    \hline
+   Half-Week & CRP & PFP & CPT & AMMT & PPL\\
+    \hline
+    
+    \hline
+    1& \checkmark & \checkmark & \checkmark & \checkmark& ?\%\\
+    \hline
+    2& & & & & \\
+    \hline
+    3& & & & & \\
+    \hline
+    4& & & & & \\
+    \hline
+    5& & & & &  \\
+    \hline
+    6& & & & & \\
+    \hline
+    7& & & & & \\
+    \hline
+    8& & & & &  \\
+    \hline
+   \end{tabular}
+\end{center}
+\label{tab:multicol}
+\end{table}
+\begin{itemize}
+	\item CRP - Completed the Reading Prior to the presentation
+	\item PFP - Participated Fully in the Presentation of the material for the week
+	\item CPT - Completed all Personal Tasks
+	\item AMMT - Actively Mobbed all the Mob Tasks (using mob-programming principles)
+	\item PCTU - Percentage of Tasks Completed and Understood
+\end{itemize}
+
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{c|c|c|c|clc}
+   \multicolumn{5}{c}{\textbf{\large Project Tracker}}\\
+    \hline
+   Week & MOB & MOC & CPT &  PIU\\
+    \hline
+    
+    \hline
+    5& \checkmark & \checkmark & \checkmark & \checkmark& ?\%\\
+    \hline
+    6& & & &\\
+    \hline
+    7& & & &\\
+    \hline
+    8& & & &\\
+    \hline
+    9& & & & \\
+    \hline
+    10& & & & \\
+    \hline
+    11& & & & \\
+    \hline
+    12& & & & \\
+    \hline
+    13\&14& & & & \\
+    \hline
+   \end{tabular}
+\end{center}
+\label{tab:multicol}
+\end{table}
+\begin{itemize}
+	\item MOB - I participated fully in the Mob, Director, and Driver responsibilities multiple times this week.
+	\item MOC - I met and fully mobbed with my team at least 3 times on different days this week.
+	\item CPT - I met and fully mobbed with my team during each class period this week.
+	\item PIU - The Percentage of materials used this week that I Understood
+\end{itemize}
+
+\subsection{Grade Claims} On the week indicated, bring this updated document to my office and make your claim.
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	Claim Week & Grade Claim & Instructor Grade & Adjusted Grade \\
+	\hline
+	 5 & & & \\
+	\hline
+	 9 & & & \\
+	\hline
+	13 - 14 & & &\\
+	\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Here is a list of the tasks for each week of the semester. It is important that you put in sufficient time outside of class to complete these on time. Otherwise, there will not be sufficient time for the project done later in the semester.
+
+\section*{Module 1 Setup and Erlang Tutorial} 
+\textbf{These are not listed in the order they should be done.} 
+\subsection*{Personal Tasks}
+	\begin{itemize}
+	\item \textbf{Readings}
+	\begin{itemize}
+		\item Chapters 4 \& 5 in \textit{Programming Erlang: Software for a Concurrent World, $2^{nd}$ Edition}
+		\item Miscellaneous web pages from search
+	\end{itemize}
+	\end{itemize}
+	\begin{itemize}
+		\item \textbf{Hardware Setup Tasks}
+		\begin{itemize}
+		\item Use Google's service to claim a Domain.
+        		\item Windows users install WSL and VSCode (https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode)
+        		\item Get \$150 of free usage from DigitalOcean
+        		\item Create a \$6 per month DO Droplet and access it using the web console.
+		\item Setup SSH on your DO Droplet and access it using SSH from the terminal on your laptop
+		\item Create a user on your DO droplet. NEVER run stuff as $root$ on any machine.
+		\item Secure your droplet.
+		\item Install Rebar3 on both your laptop and on your DO Droplet using apt (as user). This will also install Erlang.
+		\end{itemize}
+		\item \textbf{Erlang Tutorial Tasks}
+		\begin{itemize}
+		\item Get the task files from https://github.com/yenrab/ErlangTutorialTasks
+		\item Use rebar3 to create a different app for each of the task files. 
+		\item Move each provided task file into its respective app's source directory
+		\item One week at a time and one unit test at a time, write Erlang to pass all the unit tests using rebar3's eunit command.
+	\end{itemize}
+		\end{itemize}
+\subsection*{Mob Tasks}
+	\begin{itemize}
+		\item Select one team member's Digital Ocean project to be the team's project.
+		\item Add all other team members as collaborators. 
+	\end{itemize}
+	\section*{Module 2 - Further Setup and HTTPS}
+	\subsection*{Personal Tasks}
+	\begin{itemize}
+	\item \textbf{Readings}
+	\begin{itemize}
+		\item Chapter 12 in \textit{Programming Erlang: Software for a Concurrent World, $2^{nd}$ Edition}
+		\item Miscellaneous web pages from search
+	\end{itemize}
+	\end{itemize}
+	\begin{itemize}
+		\item Link your domain to the IP address to the droplet you created in your account.
+		\item Copy the provided $hello$ app onto your droplet
+		\item Run the hello app
+		\item Use your web browser to connect to the web server running on your droplet
+	\end{itemize}
+	\subsection*{Mob Tasks}
+		\begin{itemize}
+			\item Watch the video on mob programming. Use mob programming principles to complete the rest of the tasks for this week and all other weeks.
+			\item In your team's DO project, add end points for $3$ other types of responses. These responses will be of your imaginings. Include sending HTML from your handlers.
+			\begin{itemize}
+				\item \url{https://www.tutorialstonight.com/html-web-page-examples-with-source-code}
+				\item \url{https://designmodo.com/html5-examples/}
+				\item \url{https://www.w3schools.com/html/html_examples.asp}
+				\item And other things you find on the web.
+			\end{itemize}
+			\item For each \emph{.erl} file in the \href{https://github.com/yenrab/ErlangTutorialTasks}{class repository},
+			\begin{enumerate}
+            			\item On your local machine, create a GitHub private repo to hold a rebar3 app.
+            			\item Create a rebar3 app.
+            			\item Link the app to the GitHub repo.
+            			\item Add one of the provided files to your app's source directory and complete the code required to pass the supplied $gen\_server$ unit tests.
+            			\item Push your changes to GitHub
+            			\item Use git clone to move your app to your DO Droplet.
+            			\item Run all the unit tests there.
+			\end{enumerate}
+		\end{itemize}
+	
+\section*{Module 3 - Generic Servers } 
+	
+    	\begin{itemize}
+	\item\textbf{ Personal Tasks}
+	\begin{itemize}
+    		\item \textbf{Readings}
+            	\begin{itemize}
+            		\item Chapter 4 and Chapter 5 through the sys Module Recap section in \textit{Designing for Scalability with Erlang/OTP}
+            		\item Miscellaneous web pages from search
+            	\end{itemize}
+            	\end{itemize}
+	\end{itemize}
+	
+	\begin{itemize}
+		\item \textbf{Mob Tasks}
+		\begin{itemize}
+			\item Create a GitHub private repo for this weeks tasks.
+			\item Create a rebar3 app for this week's tasks.
+			\item Link the app to the GitHub repo.
+			\item Add the provided files to your app's source directory and complete the code required to pass the supplied $gen\_server$ unit tests.
+			\item Push your changes to GitHub
+			\item Use git clone to move your app to your DO Droplet.
+			\item Run all the unit tests there.
+		\end{itemize}
+	\end{itemize}
+\section*{Module 4 - Supervisors}
+	\begin{itemize}
+		\item\textbf{ Personal Tasks}
+    		\begin{itemize}
+            		\item \textbf{Readings}
+            		\begin{itemize}
+            			\item Chapter 8 in \textit{Designing for Scalability with Erlang/OTP}
+    			\end{itemize}
+		\end{itemize}
+		\item\textbf{ Mob Tasks}
+			\begin{itemize}
+				\item Create a rebar3 app and a GitHub repo for the app.
+				\item Using the gen\_server template, design, write unit tests for, and create a gen\_server that does interesting computations.
+                    		\item Create a dynamic supervisor for a set of $10$ gen\_servers of the type you just created.
+                    		\item Create a static supervisor that supervises this new supervisor and one instance of the rr\_selector. The rr\_selector should select from the set of gen\_servers of the type you just created. 
+		\end{itemize}
+	\end{itemize}
+		
+\section*{Module 5 - State Machines}
+	 \begin{itemize}
+		\item\textbf{ Personal Tasks}
+            		\begin{itemize}
+                    		\item \textbf{Readings}
+                    		\begin{itemize}
+                    			\item Chapter 6 in \textit{Designing for Scalability with Erlang/OTP}
+                    		\end{itemize}
+			\end{itemize}
+		\item \textbf{Mob Tasks}
+		\begin{itemize}
+		\item Design, write unit tests for and create an infinite, circular list balancer that indicates which of 10 gen\_servers, all of the same type, to send work to
+		\item Create an appropriate supervision tree for the balancer and the 10 gen\_servers
+		\item Design, write unit tests for and create a state machine of your own
+		\item Create an appropriate supervision tree for the balancer, the 10 gen\_servers, and your state machine
+		
+		\end{itemize}
+	\end{itemize}
+	\section*{Module 6 - Event Handlers} 
+	 \begin{itemize}
+		\item\textbf{ Personal Tasks}
+		\begin{itemize}
+            		\item \textbf{Readings}
+            		\begin{itemize}
+            			\item Chapter 7 in \textit{Designing for Scalability with Erlang/OTP}
+            		\end{itemize}
+		\end{itemize}
+		\item \textbf{Mob Tasks}
+		\begin{itemize}
+		\item Design, write unit tests and implement an application controller. 
+		\item Redesign, write unit tests for and implement the \textit{Retrieving Data} example. Use a gen\_server to store the data and a state machine to determine if the call should be done synchronously or asynchronously. The calls should be made using event handlers.
+		\item Create an appropriate supervision tree for the OTP elements of  redesigned \textit{Retrieving Data} example
+		\end{itemize}
+	\end{itemize}
+	\section*{Module 7 - Monitoring and Preemptive Support}
+	 \begin{itemize}
+		\item\textbf{ Personal Tasks} 
+            	\begin{itemize}
+            		\item \textbf{Readings}
+            		\begin{itemize}
+            			\item Chapter 16 in \textit{Designing for Scalability with Erlang/OTP}
+            		\end{itemize}
+            	\end{itemize}
+		\item \textbf{Mob Tasks}
+		\begin{itemize}
+		\item Select the most complicated code you've created. Apply the monitoring and support principles you've learned in this reading to evaluate your code
+		\end{itemize}
+	\end{itemize}
+	\section*{Module 8 - HTTP, Mocking, Data Storage, and Data Retrieval}  
+	\begin{itemize}
+		\item \textbf{Readings}
+		\begin{itemize}
+			\item Miscellaneous pages from Web Search
+		\end{itemize}
+	\end{itemize}
+	\begin{itemize}
+		\item \textbf{Mob Tasks}
+		\begin{itemize}
+		\item Build an entire Web-available micro-service that stores, updates, and deletes data of your choice. Use Cowboy, SSL, DMZ, and Riak. Setup an appropriate supervision tree for your micro-service
+		\end{itemize}
+	\end{itemize}
+
+	\section*{Remainder of Class} \textbf{(Project)} Using what you have learned, create a Web Service for Package Tracking - API Design, Software Design, Unit Testing, Implementation, System Stress Testing
+	\subsection{Things to be Aware Of}
+	\begin{itemize}
+		\item Make sure you keep your project app in a unique GitHub repository. If you don't you'll slow down your engineering and development.
+		\item Put all your engineering designs in GitHub.
+		\item Every *nix system has a limit for how many open files there can be on the system.
+		\item There are a whole lot of things that are considered files on *nix systems.
+		\item Don't over engineer your first design. It won't be your last. Let the bottlenecks you discover drive engineering changes that increase optimization.
+	\end{itemize}
+
+\end{document}
