@@ -39,7 +39,7 @@ Note: Each row represents a module, a half-week's work.
 \begin{tabular}{c|c|c|c|c|c}
    \multicolumn{6}{c}{\textbf{\large Course Tracker}}\\
     \hline
-   Half-Week & CRP & PFP & CPT & AMMT & PPL\\
+   Half-Week & CRP & PFP & CPT & AMMT & PCTU\\
     \hline
     
     \hline
@@ -249,22 +249,16 @@ Here is a list of the tasks for each week of the semester. It is important that 
             		\begin{itemize}
                     		\item \textbf{Readings}
                     		\begin{itemize}
-                    			\item Chapter 6 in \textit{Designing for Scalability with Erlang/OTP} Read the state machine description and problem portions, but not the part about the the gen\_fsm. The gen\_fsm behavior has been replaced by the gen\_statem behavior. I'll show you how to use it in class. 
+                    			\item Chapter 6 in \textit{Designing for Scalability with Erlang/OTP}
                     		\end{itemize}
 			\end{itemize}
 		\item \textbf{Mob Tasks}
 		\begin{itemize}
-			\item\begin{enumerate}
-			\item\begin{itemize}
-            			\item Create a rebar3 app for a car state machine and a GitHub repo for the app.
-            			\item Put the $car_statem.erl$ file in the app's $src$ directory.
-            			\item Write code so that the car state machine passes each unit test.
-			\end{itemize}
-			\item\begin{itemize}
-            			\item Create a rebar3 app and a GitHub repo for the app.
-            			\item Using the gen\_statem template, design, write unit tests for, and create a gen\_statem that represents a robotic arm in a factory. The details will be given in class.
-			\end{itemize}
-			\end{enumerate}
+		\item Design, write unit tests for and create an infinite, circular list balancer that indicates which of 10 gen\_servers, all of the same type, to send work to
+		\item Create an appropriate supervision tree for the balancer and the 10 gen\_servers
+		\item Design, write unit tests for and create a state machine of your own
+		\item Create an appropriate supervision tree for the balancer, the 10 gen\_servers, and your state machine
+		
 		\end{itemize}
 	\end{itemize}
 	\section*{Module 6 - Event Handlers} 
@@ -278,9 +272,9 @@ Here is a list of the tasks for each week of the semester. It is important that 
 		\end{itemize}
 		\item \textbf{Mob Tasks}
 		\begin{itemize}
-			\item Create a rebar3 library for a notification component and a GitHub repo for the library.
-            		\item Put the $note_events.erl$ file in the library's $src$ directory.
-            		\item Write code so that the note event handlers pass each unit test. 
+		\item Design, write unit tests and implement an application controller. 
+		\item Redesign, write unit tests for and implement the \textit{Retrieving Data} example. Use a gen\_server to store the data and a state machine to determine if the call should be done synchronously or asynchronously. The calls should be made using event handlers.
+		\item Create an appropriate supervision tree for the OTP elements of  redesigned \textit{Retrieving Data} example
 		\end{itemize}
 	\end{itemize}
 	\section*{Module 7 - Monitoring and Preemptive Support}
@@ -294,7 +288,7 @@ Here is a list of the tasks for each week of the semester. It is important that 
             	\end{itemize}
 		\item \textbf{Mob Tasks}
 		\begin{itemize}
-		\item Select the most complicated code you've created so far. Apply the monitoring and support principles you've learned in this reading to evaluate your code
+		\item Select the most complicated code you've created. Apply the monitoring and support principles you've learned in this reading to evaluate your code
 		\end{itemize}
 	\end{itemize}
 	\section*{Module 8 - HTTP, Mocking, Data Storage, and Data Retrieval}  
@@ -308,7 +302,6 @@ Here is a list of the tasks for each week of the semester. It is important that 
 		\item \textbf{Mob Tasks}
 		\begin{itemize}
 		\item Build an entire Web-available micro-service that stores, updates, and deletes data of your choice. Use Cowboy, SSL, DMZ, and Riak. Setup an appropriate supervision tree for your micro-service
-		\item Write gen\_servers and other OTP behaviors as needed. mock all data storage and retrieval in the unit tests.
 		\end{itemize}
 	\end{itemize}
 
